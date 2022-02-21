@@ -24,30 +24,31 @@ while calculator_open.open == True:
         binary1 = input("Enter the first binary number: ")
         binary2 = input("Enter the second binary number: ")
         calculator = Calculator(binary1, binary2)
-        print(calculator.add())
+        print(f"\n{binary1} + {binary2} = {calculator.add()}\n")
 
     if user_input.upper() == 'S':
         binary1 = input("Enter the first binary number: ")
         binary2 = input("Enter the second binary number: ")
         calculator = Calculator(binary1, binary2)
-        print(calculator.subtract())
+        print(f"\n{binary1} - {binary2} = {calculator.subtract()}\n")
 
     if user_input.upper() == 'M':
         binary1 = input("Enter the first binary number: ")
         binary2 = input("Enter the second binary number: ")
         calculator = Calculator(binary1, binary2)
-        print(calculator.multiply())
+        print(f"\n{binary1} * {binary2} = {calculator.multiply()}\n")
 
     if user_input.lower() == 'i':
         binary1 = input("Enter the first binary number: ")
         binary2 = input("Enter the second binary number: ")
         calculator = Calculator(binary1, binary2)
-        print(calculator.divide())
+        print(f"\n{binary1} / {binary2} = {calculator.divide()}\n")
 
     if user_input.upper() == 'Q':
         calculator_open.quit()
 
     if user_input.upper() != 'Q':
+        print("\n**Not a valid input.**\n")
         cont = input("Press <enter> to continue, or 'Q' to quit. ")
         if cont == '':
             continue
